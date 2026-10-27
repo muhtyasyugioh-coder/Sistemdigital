@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #090d16;
+    color: #f1f5f9;
+    overflow-x: hidden;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+/* Blueprint canvas grid pattern */
+.canvas-grid {
+  background-color: #0b1120;
+  background-image: 
+    radial-gradient(circle at 1px 1px, rgba(56, 189, 248, 0.12) 1.5px, transparent 0);
+  background-size: 24px 24px;
+}
+
+/* Glowing digital pulse along active wires */
+@keyframes wirePulse {
+  0% {
+    stroke-dashoffset: 24;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.wire-animated {
+  stroke-dasharray: 6 6;
+  animation: wirePulse 1.2s linear infinite;
+}
+
+/* Hide scrollbar for mobile overflow bars */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Custom scrollbar for panels and code editors */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}

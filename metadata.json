@@ -1,0 +1,6 @@
+{
+  "name": "LogikaLab - Interactive Logic Gate Simulator",
+  "description": "Simulasi gerbang logika interaktif real-time dengan drag-and-drop AND, OR, NOT, ekspor JSON, berbagi rangkaian, dokumentasi API, dan generator implementasi kode (Python, HTML/JS, C++, Verilog).",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
